@@ -1,6 +1,14 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'pry'
 
-get '/' do
-  "hello world!"
+class Blog < Sinatra::Base
+  get '/' do
+    "hello world!"
+  end
+
+#
+# run server when file is invoked directly;
+  if __FILE__ == $0
+    run!
+  end
 end
