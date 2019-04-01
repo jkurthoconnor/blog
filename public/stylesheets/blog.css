@@ -1,21 +1,57 @@
 body {
   font: normal 18px Helvetica, Arial, sans-serif;
   color: #080808;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  line-height: 1.6;
+  position: relative; 
 }
 
 main {
-  padding: 50px;
-  margin: 50px auto;
+  padding: 200px 50px 50px;
+  margin: 0 auto;
   max-width: 750px;
 }
 
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: #fff;
+}
+
 header, footer {
+  padding: 25px 0;
   text-align: center;
 }
 
 h1, h2, h3 {
   font-size: 26px;
+  padding: 25px 0;
+}
+
+#landing h2 {
+  text-align: center;
+}
+
+header ul, header li,
+footer ul, footer li {
+  display: inline-block;
+}
+
+li {
+  margin: 0 50px;
+  padding: 0 5px;
+}
+
+header li:hover,
+header li:active,
+footer li:hover {
+  border-bottom: 1px solid black;
+}
+
+p {
+  padding: 25px 0;
 }
 
 a {
@@ -23,14 +59,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
 /* establish basic colors */
 /* fonts & sizes */
 /* make header and footer li inline block */
 /* layout */
 /* code blocks */
-
+/* make favicon from gravitar */

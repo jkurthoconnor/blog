@@ -16,7 +16,7 @@ Adipisicing quos repellendus sint est ea Ipsum labore praesentium quis libero ar
 
 ### Code Samples
 
-```ruby
+```
 class Array
   def my_fake_method(str)
     puts str
