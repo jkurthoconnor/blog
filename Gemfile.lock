@@ -11,6 +11,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    psych (3.1.0)
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
@@ -37,6 +38,7 @@ PLATFORMS
 
 DEPENDENCIES
   pry
+  psych
   sinatra
   sinatra-contrib
   thin

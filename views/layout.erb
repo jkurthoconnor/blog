@@ -5,7 +5,27 @@
   <title><%= @title %></title>
 </head>
 <body>
-  <%= yield %>
+  <header>
+    <h1><a href="/">kurth o'connor</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/projects">projects</a></li>
+        <li><a href="/blog">blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <ul>
+      <li><a href="">linkedin</a></li>
+      <li><a href="">github</a></li>
+      <li><a href="">mail</a></li>
+      <li><a href="">gpg</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
 

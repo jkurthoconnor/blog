@@ -1,0 +1,12 @@
+<section class="index" >
+  <% @posts.each do |article| %>
+
+    <ul>
+      <li><a href=<%= uri(article.resource) %>><%= article.title %></a></li>
+      <li> <%= article.date %> </li>
+      <li> <%= article.tags %> </li>
+    </ul>
+
+    <p><%= article.abstract %> </p>
+  <% end %>
+</section>
