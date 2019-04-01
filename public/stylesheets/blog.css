@@ -1,0 +1,34 @@
+body {
+  font: normal 18px Helvetica, Arial, sans-serif;
+  color: #080808;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 50px;
+  margin: 50px auto;
+  max-width: 750px;
+}
+
+header, footer {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-size: 26px;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #222c;
+}
+
+/* remove bullets from all li */
+/* establish basic pallete */
+/* fonts & sizes */
+/* make header and footer li inline block */
+/* layout */
+

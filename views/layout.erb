@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title><%= @title %></title>
-</head>
-<body>
-  <header>
-    <h1><a href="/">kurth o'connor</a></h1>
-    <nav>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/blog.css">
+    <title><%= @title %></title>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="/">kurth o'connor</a></h1>
+      <nav>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/projects">projects</a></li>
+          <li><a href="/blog">blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
       <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/projects">projects</a></li>
-        <li><a href="/blog">blog</a></li>
+        <li><a href="https://www.linkedin.com/in/kurth-o-connor-01986a169" target="_blank">linkedin</a></li>
+        <li><a href="https:github.com/jkurthoconnor" target="_blank">github</a></li>
+        <li><a href="">mail</a></li>
+        <li><a href="">gpg</a></li>
       </ul>
-    </nav>
-  </header>
-  <main>
-    <%= yield %>
-  </main>
-  <footer>
-    <ul>
-      <li><a href="">linkedin</a></li>
-      <li><a href="">github</a></li>
-      <li><a href="">mail</a></li>
-      <li><a href="">gpg</a></li>
-    </ul>
-  </footer>
-</body>
+    </footer>
+
+  </body>
 </html>
 
 
