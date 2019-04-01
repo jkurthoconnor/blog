@@ -14,6 +14,16 @@ Consectetur amet magni alias velit quis iure facere nam hic beatae? Modi eligend
 
 Adipisicing quos repellendus sint est ea Ipsum labore praesentium quis libero architecto Corrupti fugiat quos enim minus a. Cum rem recusandae voluptatem repellendus sint.
 
+### Code Samples
+
+```ruby
+class Array
+  def my_fake_method(str)
+    puts str
+  end
+end
+```
+
 ### Sub-heading
 
 Sit magnam consequatur iste impedit in? Explicabo necessitatibus iste modi adipisci rerum, dolore blanditiis inventore distinctio Quidem amet corporis nam minima repellat Architecto quas nulla corporis fuga eum. At reiciendis ad rem aut eos Recusandae fugiat totam alias delectus debitis. Ipsum numquam saepe facere sit dolores Dolore aspernatur maxime enim sapiente rerum. Mollitia accusantium iusto culpa eaque exercitationem! Excepturi repellat possimus ipsum provident porro. Velit aspernatur vitae autem distinctio quibusdam, dicta. Dolorum consectetur quia explicabo quo suscipit quidem Mollitia incidunt vel sed dicta libero! Aliquid numquam adipisci qui ratione reiciendis Earum corrupti suscipit neque hic id excepturi Nihil rerum nisi dignissimos magni illum? Tenetur veniam nostrum distinctio fugiat optio? A qui sapiente quae praesentium sint non Repellendus aliquam delectus praesentium!

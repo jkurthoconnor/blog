@@ -6,6 +6,7 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "thin"
 gem "psych"
+gem "redcarpet"
 
 group :development do
   gem "pry"

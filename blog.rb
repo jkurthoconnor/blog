@@ -1,12 +1,14 @@
 require "sinatra/base"
 require "ostruct"
 require "psych"
+require "redcarpet"
 require "date"
 
 class Blog < Sinatra::Base
 
   configure do
     set :root, File.expand_path("..", __FILE__)
+    Tilt.register Redcarpet::Markdown
   end
 
   configure :development do
@@ -20,7 +22,12 @@ class Blog < Sinatra::Base
   end
 
   before do
+    headers "Cache-Control" => "public, must-revalidate, max-age=7200",
+            "Expires" => Time.at(Time.now + 7200).to_s
+
     @title = "kurth o'connor"
+
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, fenced_code_blocks: true)
   end
 
   before("/blog*") do
@@ -41,6 +48,7 @@ class Blog < Sinatra::Base
   end
 
   get "/" do
+
     erb :landing
   end
 
