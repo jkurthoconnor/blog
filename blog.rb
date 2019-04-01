@@ -48,8 +48,11 @@ class Blog < Sinatra::Base
   end
 
   get "/" do
+    erb :landing, layout: false
+  end
 
-    erb :landing
+  get "/about" do
+    erb :about
   end
 
   get "/projects/?" do
@@ -71,7 +74,7 @@ class Blog < Sinatra::Base
   not_found do
     @message =  "Resource `#{request.env["REQUEST_PATH"] }` is unavailable."
 
-    erb :landing
+    erb :about
   end
 
   error 500 do

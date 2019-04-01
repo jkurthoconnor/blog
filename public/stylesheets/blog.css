@@ -12,6 +12,11 @@ main {
   max-width: 750px;
 }
 
+#landing {
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
 
 header {
   position: fixed;
@@ -30,10 +35,11 @@ h1, h2, h3 {
   padding: 25px 0;
 }
 
-#landing h2 {
+#about h2 {
   text-align: center;
 }
 
+#landing ul, #landing li,
 header ul, header li,
 footer ul, footer li {
   display: inline-block;
@@ -44,8 +50,10 @@ li {
   padding: 0 5px;
 }
 
+#landing li:hover,
+#landing li.current,
 header li:hover,
-header li:active,
+header li.current,
 footer li:hover {
   border-bottom: 1px solid black;
 }
@@ -61,7 +69,7 @@ a {
 
 /* establish basic colors */
 /* fonts & sizes */
-/* make header and footer li inline block */
 /* layout */
 /* code blocks */
+/* write code (backend? frontend?) to add/remove `current` class */
 /* make favicon from gravitar */
