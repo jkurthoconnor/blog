@@ -1,6 +1,6 @@
 body {
-  font: normal 18px Helvetica, Arial, sans-serif;
-  color: #080808;
+  font: normal 18px "Roboto", sans-serif;
+  color: #0f0f0f;
   letter-spacing: 1.2px;
   line-height: 1.6;
   position: relative; 
@@ -67,9 +67,9 @@ a {
   text-decoration: none;
 }
 
+/* splash/landing */
 /* establish basic colors */
 /* fonts & sizes */
-/* layout */
-/* code blocks */
+/* render code blocks appropriately*/
 /* write code (backend? frontend?) to add/remove `current` class */
 /* make favicon from gravitar */

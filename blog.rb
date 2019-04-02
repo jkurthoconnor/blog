@@ -21,9 +21,11 @@ class Blog < Sinatra::Base
     set :show_exceptions, :after_handler
   end
 
+
   before do
-    headers "Cache-Control" => "public, must-revalidate, max-age=7200",
-            "Expires" => Time.at(Time.now + 7200).to_s
+
+    # headers "Cache-Control" => "public, must-revalidate, max-age=7200",
+    #         "Expires" => Time.at(Time.now + 7200).to_s
 
     @title = "kurth o'connor"
 

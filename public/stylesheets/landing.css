@@ -1,0 +1,51 @@
+body {
+  font: normal 28px "Roboto", sans-serif;
+  color: #fff;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+
+header,
+nav,
+div.landing {
+  display: flex;
+}
+
+div.landing {
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../images/snowshadows.jpg);
+  background-size: cover;
+  filter: grayscale(0.5);
+}
+
+header,
+nav {
+  box-shadow: 0 0 90px rgba(0,0,0, .4);
+  background: rgba(0,0,0, .35);
+}
+
+header,
+div.landing {
+  justify-content: center;
+}
+
+nav {
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+h1 {
+  font-size: 76px;
+}
+
+nav a:hover,
+nav a.current {
+  border-bottom: 1px solid white;
+}
+
+a {
+  margin: 0 15px;
+  color: inherit;
+  text-decoration: none;
+}

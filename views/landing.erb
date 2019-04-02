@@ -2,22 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/reset.css">
-    <link rel="stylesheet" href="/stylesheets/blog.css">
+    <link rel="stylesheet" href="/stylesheets/landing.css">
     <title><%= @title %></title>
   </head>
 
   <body>
-    <main id="landing">
-      <h1><a href="/">kurth o'connor</a></h1>
+    <div class="landing">
+      <header>
+        <h1><a href="/">kurth o'connor</a></h1>
+      </header>
       <nav>
-        <ul>
-          <li class="current"><a href="/">home</a></li>
-          <li><a href="/about" active>about</a></li>
-          <li><a href="/projects">projects</a></li>
-          <li><a href="/blog">blog</a></li>
-        </ul>
+        <a href="/" class="current">home</a>
+        <a href="/about" active>about</a>
+        <a href="/projects">projects</a>
+        <a href="/blog">blog</a>
       </nav>
-    </main>
+    </div>
   </body>
 </html>
