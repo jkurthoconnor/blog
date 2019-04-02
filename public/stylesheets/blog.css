@@ -12,37 +12,43 @@ main {
   max-width: 750px;
 }
 
-#landing {
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
+header, nav, footer {
+  display: flex;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  background-color: #fff;
+nav, footer {
+  justify-content: space-evenly;
 }
 
 header, footer {
-  padding: 25px 0;
-  text-align: center;
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 750px;
+
 }
+
+/* header is flush with left wall; how to keep absolute */ 
+/* positioning and allow the left/right margins to be automatic? */
+header {
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #fff;
+}
+
 
 h1, h2, h3 {
   font-size: 26px;
-  padding: 25px 0;
-}
-
-#about h2 {
   text-align: center;
 }
 
-#landing ul, #landing li,
-header ul, header li,
-footer ul, footer li {
-  display: inline-block;
+h2, h3 {
+  padding: 35px 0;
+}
+
+h1 {
+  padding-bottom: 40px;
 }
 
 li {
@@ -50,11 +56,9 @@ li {
   padding: 0 5px;
 }
 
-#landing li:hover,
-#landing li.current,
-header li:hover,
-header li.current,
-footer li:hover {
+nav a:hover,
+nav a.current,
+footer a:hover {
   border-bottom: 1px solid black;
 }
 
@@ -63,13 +67,12 @@ p {
 }
 
 a {
+  /* padding: 10px; */
   color: inherit;
   text-decoration: none;
 }
 
-/* splash/landing */
-/* establish basic colors */
-/* fonts & sizes */
+/* refactor with flexbox */
 /* render code blocks appropriately*/
 /* write code (backend? frontend?) to add/remove `current` class */
 /* make favicon from gravitar */
