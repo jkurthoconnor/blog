@@ -1,2 +1,2 @@
-require './blog'
+require './lib/blog'
 run Blog

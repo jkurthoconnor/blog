@@ -3,11 +3,12 @@ require "ostruct"
 require "psych"
 require "redcarpet"
 require "date"
+require_relative "./htmlwithpygments"
+
 
 class Blog < Sinatra::Base
-
   configure do
-    set :root, File.expand_path("..", __FILE__)
+    set :root, File.expand_path("../..", __FILE__)
     Tilt.register Redcarpet::Markdown
   end
 
@@ -28,8 +29,6 @@ class Blog < Sinatra::Base
     #         "Expires" => Time.at(Time.now + 7200).to_s
 
     @title = "kurth o'connor"
-
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, fenced_code_blocks: true)
   end
 
   before("/blog*") do
@@ -67,10 +66,10 @@ class Blog < Sinatra::Base
 
   get "/blog/:title" do
     @post = @posts.find { |post| post.resource.include?(params[:title]) }
-
     pass unless @post
 
-    erb :blog_post
+    markdown = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
+    erb :blog_post, locals: { markdown: markdown } 
   end
 
   not_found do
