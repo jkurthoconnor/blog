@@ -42,12 +42,16 @@ h1 {
   font-size: 76px;
 }
 
-nav a:hover,
-nav a.current {
-  border-bottom: 1px solid white;
+a.over {
+  border-bottom: 1px solid rgba(255,255,255, 0.6);
+}
+
+a.current {
+  border-bottom: 1px solid rgba(255,255,255, 1);
 }
 
 a {
+  border-bottom: 1px solid rgba(255,255,255, 0);
   margin: 0 15px;
   color: inherit;
   text-decoration: none;

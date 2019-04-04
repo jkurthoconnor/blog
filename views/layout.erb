@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link rel="stylesheet" type="text/css" href="/stylesheets/blog.css">
+    <script type="text/javascript" src="/javascripts/navCues.js"></script>
+
     <title><%= @title %></title>
   </head>
 
   <body>
     <header>
-      <h1><a href="/">kurth o'connor</a></h1>
+      <h1>kurth o'connor</h1>
       <nav>
-        <a href="/" class="current">home</a>
-        <a href="/about" active>about</a>
-        <a href="/projects">projects</a>
-        <a href="/blog">blog</a>
+        <a href="/" class="<%= @home_status %>" >home</a>
+        <a href="/about" class="<%= @about_status %>" >about</a>
+        <a href="/projects" class="<%= @project_status %>" >projects</a>
+        <a href="/blog" class="<%= @blog_status %>" >blog</a>
       </nav>
     </header>
 

@@ -49,22 +49,27 @@ class Blog < Sinatra::Base
   end
 
   get "/" do
+    @home_status = "current"
     erb :landing, layout: false
   end
 
   get "/about" do
+    @about_status = "current"
     erb :about
   end
 
   get "/projects/?" do
+    @project_status = "current"
     erb :project_index
   end
 
   get "/blog/?" do
+    @blog_status = "current"
     erb :blog_index
   end
 
   get "/blog/:title" do
+    @blog_status = "current"
     @post = @posts.find { |post| post.resource.include?(params[:title]) }
     pass unless @post
 
