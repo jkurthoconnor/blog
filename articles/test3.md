@@ -1,6 +1,6 @@
-title: At This Point, it Must Be the      Third
+title: At This Point, it Must Be the Third
 date: 2018-02-19
-abstract: This is a brief summary of the post. Do you like it?
+abstract: Adipisicing quibusdam quod exercitationem ex voluptas Deleniti eligendi in doloribus nulla tenetur Laborum assumenda ipsum modi quia velit blanditiis deserunt Quod eligendi laborum culpa omnis ea? Ipsum iste in ipsum dolore praesentium Eaque ratione similique! 
 tags: development
 
 

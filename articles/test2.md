@@ -1,6 +1,6 @@
 title: Another Little Post
 date: 2019-03-21
-abstract: This is a brief summary of the post. Do you like it?
+abstract: This is a brief summary of the post. Some days, a peanut butter sandwich is the most fulfilling lunch; other days, I can barely look at one. So, what's the difference, and how can we know what kind of bread to use?
 tags: development
 
 

@@ -1,6 +1,6 @@
 title: The First Test Post I've Written
 date: 2017-08-30
-abstract: This is a brief summary of the post. Do you like it?
+abstract: This is a brief summary of the post. Do you like it? It is often difficult to write a good abstract. But I must say, this is one of the best.
 tags: development
 
 
