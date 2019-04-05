@@ -72,10 +72,6 @@ a.over {
   border-bottom: 1px solid rgba(255,0,0, 0.4);
 }
 
-p {
-  padding: 25px 0;
-}
-
 a {
   font-weight: 500;
   color: inherit;
@@ -88,6 +84,10 @@ a.read_more {
   margin-left: 10px;
   color: rgba(255,0,0,1);
   }
+
+p {
+  padding: 25px 0;
+}
 
 /* restyle project indices */
 /* make favicon from gravitar */

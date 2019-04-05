@@ -1,18 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
   let anchors = document.querySelectorAll('a');
+  let topBorder = document.getElementsByClassName('border')[0];
 
   anchors.forEach(function(a) {
     a.addEventListener('mouseenter', function(e) {
-      e.target.classList.toggle("over");
-      // setTimeout( () => e.target.classList.remove("over"), 375);
+      if (!e.target.classList.contains('current')) {
+          e.target.classList.toggle('over');
+      }
     });
 
     a.addEventListener('mouseleave', function(e) {
-      e.target.classList.toggle("over");
+      if (!e.target.classList.contains('current')) {
+        e.target.classList.toggle('over');
+      }
     });
 
-    // a.addEventListener('hover', function(e) {
-    //   e.target.style.color = "red";
-    // });
+    a.addEventListener('click', function(e) {
+      topBorder.style.backgroundColor = 'rgba(255,0,0,1.0)';
+    });
   });
 });

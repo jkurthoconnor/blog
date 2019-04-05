@@ -17,11 +17,9 @@ class Blog < Sinatra::Base
     require "pry"
 
     register Sinatra::Reloader
-
     set :logging, true
     set :show_exceptions, :after_handler
   end
-
 
   before do
 
