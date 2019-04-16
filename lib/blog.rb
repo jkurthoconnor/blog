@@ -22,11 +22,12 @@ class Blog < Sinatra::Base
   end
 
   before do
-
-    # headers "Cache-Control" => "public, must-revalidate, max-age=7200",
-    #         "Expires" => Time.at(Time.now + 7200).to_s
-
     @title = "kurth o'connor"
+
+    if :production
+      headers "Cache-Control" => "public, must-revalidate, max-age=7200",
+              "Expires" => Time.at(Time.now + 7200).to_s
+    end
   end
 
   before("/blog*") do
@@ -43,6 +44,16 @@ class Blog < Sinatra::Base
                                 .downcase
                                 .prepend("blog/")
       @posts << post
+    end
+  end
+
+  before("/projects*") do
+    @projects = []
+
+    Dir.glob("projects/*.yaml") do |file|
+      contents = File.read(File.expand_path(file))
+      project = OpenStruct.new(Psych.load(contents))
+      @projects << project
     end
   end
 
@@ -66,9 +77,9 @@ class Blog < Sinatra::Base
     erb :blog_index
   end
 
-  get "/blog/:title" do
+  get "/blog/:title" do |title|
     @blog_status = "current"
-    @post = @posts.find { |post| post.resource.include?(params[:title]) }
+    @post = @posts.find { |post| post.resource.include?(title) }
     pass unless @post
 
     markdown = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
@@ -77,6 +88,7 @@ class Blog < Sinatra::Base
 
   not_found do
     @message =  "Resource `#{request.env["REQUEST_PATH"] }` is unavailable."
+    @about_status = "current"
 
     erb :about
   end

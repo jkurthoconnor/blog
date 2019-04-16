@@ -1,9 +1,9 @@
 <section class="index" >
   <h2>Projects</h2>
-  <ul>
-    <li><a href="">Project 1</a></li>
-    <li><a href="">Project 2</a></li>
-    <li><a href="">Project 3</a></li>
-    <li><a href="">Project 4</a></li>
-  </ul>
+  <% @projects.each do |project| %>
+    <ul>
+      <li><a href=<%= project.url %> target="_blank"><%= project.name %></a></li>
+      <li><p><%= project.description %></p></li>
+    </ul>
+  <% end %>
 </section>
