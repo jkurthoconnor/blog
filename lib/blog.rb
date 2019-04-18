@@ -24,10 +24,8 @@ class Blog < Sinatra::Base
   before do
     @title = "kurth o'connor"
 
-    if :production
-      headers "Cache-Control" => "public, must-revalidate, max-age=7200",
-              "Expires" => Time.at(Time.now + 7200).to_s
-    end
+    headers "Cache-Control" => "public, must-revalidate, max-age=7200",
+            "Expires" => Time.at(Time.now + 7200).to_s
   end
 
   before("/blog*") do
