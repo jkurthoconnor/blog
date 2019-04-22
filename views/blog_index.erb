@@ -4,9 +4,14 @@
 
     <ul>
       <li><a href=<%= uri(article.resource) %>><%= article.title %></a></li>
-      <li> Posted on: <%= article.date %> </li>
-      <li> Tags: <%= article.tags %> </li>
-      <li><p><%= article.abstract %> <a href=<%= uri(article.resource) %> class="read_more">more</a>...</p></li>
+      <li><%= article.date %></li>
+      <li><%= article.tags %></li>
+      <li>
+        <p>
+          <%= article.abstract %>
+          <a href=<%= uri(article.resource) %> class="read_more">more >></a>
+        </p>
+      </li>
     </ul>
 
   <% end %>
