@@ -74,6 +74,13 @@ header a, footer a {
   margin: 0 50px 10px;
 }
 
+footer a:nth-of-type(1) {
+  margin-left: 10px;
+}
+footer a:nth-of-type(2) {
+  margin-left: 25px;
+}
+
 a.current {
   border-bottom: 1px solid rgba(255,0,0, 0.8);
 }
@@ -92,7 +99,49 @@ p {
   padding: 25px 0;
 }
 
+@media (min-width: 451px) and (max-width: 600px) {
+  header a, footer a, footer a:nth-of-type(2) {
+    margin: 0 35px 10px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+  header a:nth-of-type(4) {
+    margin-left: 70px;
+    margin-right: 20px;
+  }
+
+  footer a:nth-of-type(4) {
+    margin-left:  80px;
+    margin-right: 5px;
+  }
+
+  footer a:nth-of-type(1) {
+    margin-left: 50px;
+  }
+
+  footer a:nth-of-type(2) {
+    margin: 0 35px 10px;
+  }
+
+  header a:nth-of-type(3),
+  footer a:nth-of-type(3) {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 299px) {
+  header a, footer a,
+  header a:nth-of-type(4),
+  footer a:nth-of-type(4),
+  footer a:nth-of-type(2),
+  header a:nth-of-type(3),
+  footer a:nth-of-type(3) {
+    margin: 0 25px;
+  }
+}
+  
 /* restyle project indices */
 /* make favicon from gravitar */
   /* introduce more color accents */
-  /* fine-tune spacing */
+/* fine-tune font size / weight */
