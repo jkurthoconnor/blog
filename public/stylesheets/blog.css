@@ -3,60 +3,72 @@
 @import url('code_blocks.css');
 
 body {
-  font: 400 18px "Roboto", sans-serif;
+  position: relative;
+  font: 400 16px "Roboto", sans-serif;
   color: #0f0f0f;
   letter-spacing: 1.2px;
   line-height: 1.6;
-  position: relative; 
 }
 
-body, header, main {
+body,
+header,
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav, footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 25px 0 50px;
+header {
+  position: fixed;
+  top: 3px;
   width: 100%;
+  padding-top: 50px;
+  background-color: #fff;
 }
 
 main {
   max-width: 750px;
-  margin: 290px 50px 0;
-}
-
-header {
-  position: fixed;
-  top: 3px;
-  padding-top: 50px;
-  width: 100%;
-  background-color: #fff;
+  margin: 280px 50px 0;
 }
 
 div.border {
   position: fixed;
+  top: 0px;
   width: 100%;
   height: 3px;
   background-color: rgba(200,0,0,0.7);
-  top: 0px;
 }
 
-h1, h2, h3 {
-  font-size: 26px;
-  font-weight: 500;
+nav,
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 28px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
   text-align: center;
 }
 
-h3 {
-  margin-bottom: 20px;
+h1 {
+  font-size: 37px;
+  letter-spacing: 2.4px;
+  margin-bottom: 10px;
 }
 
-h1, h2 {
+h2 {
+  font-size: 28px;
   margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -70,50 +82,87 @@ a {
   border-bottom: 1px solid rgba(0,0,0, 0);
 }
 
-header a, footer a {
+header a,
+footer a {
   margin: 0 50px 10px;
 }
 
 footer a:nth-of-type(1) {
   margin-left: 10px;
 }
+
 footer a:nth-of-type(2) {
   margin-left: 25px;
 }
 
 a.current {
-  border-bottom: 1px solid rgba(255,0,0, 0.8);
+  border-bottom: 1px solid rgba(255,0,0, 1.0);
 }
 
 a.over {
-  border-bottom: 1px solid rgba(255,0,0, 0.4);
+  border-bottom: 1px solid rgba(255,0,0, 0.3);
 }
-
-a.read_more {
-  font-weight: 300;
-  margin-left: 10px;
-  color: rgba(255,0,0,1);
-  }
 
 p {
-  padding: 25px 0;
+  margin: 25px 0;
 }
 
-@media (min-width: 451px) and (max-width: 600px) {
-  header a, footer a, footer a:nth-of-type(2) {
+.index p {
+  border-left: 2px solid rgba(255,0,0, 0.3);
+  padding-left: 1em;
+}
+
+.index p:hover {
+  border-left: 2px solid rgba(255,0,0, 0.8);
+}
+
+.index p > a {
+  font-weight: inherit;
+  border: none;
+}
+
+.index .date {
+  margin-top: .5em;
+}
+
+.index .date,
+.index .tags {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+span.more {
+  font-weight: 300;
+  margin-left: 10px;
+  color: rgba(255,0,0,0.8);
+}
+
+span.more:hover {
+  font-weight: 400;
+  color: rgba(255,0,0,1.0);
+}
+
+@media (min-width: 374px) and (max-width: 600px) {
+  header a,
+  footer a,
+  footer a:nth-of-type(2) {
     margin: 0 35px 10px;
+  }
+
+  header a:nth-of-type(4),
+  footer a:nth-of-type(4) {
+    margin-left: 15px;
   }
 }
 
-@media (min-width: 300px) and (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 373px) {
+  header a:nth-of-type(3) {
+    margin: 0 20px 0 0;
+  }
+
   header a:nth-of-type(4) {
     margin-left: 70px;
     margin-right: 20px;
-  }
-
-  footer a:nth-of-type(4) {
-    margin-left:  80px;
-    margin-right: 5px;
   }
 
   footer a:nth-of-type(1) {
@@ -124,24 +173,35 @@ p {
     margin: 0 35px 10px;
   }
 
-  header a:nth-of-type(3),
   footer a:nth-of-type(3) {
-    margin: 0 20px 0 0;
+    margin: 0 20px 0 18px;
+  }
+
+  footer a:nth-of-type(4) {
+    margin-left:  80px;
+    margin-right: 5px;
   }
 }
 
 @media (max-width: 299px) {
-  header a, footer a,
-  header a:nth-of-type(4),
-  footer a:nth-of-type(4),
-  footer a:nth-of-type(2),
+  nav,
+  footer {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  header a,
+  footer a,
   header a:nth-of-type(3),
-  footer a:nth-of-type(3) {
-    margin: 0 25px;
+  header a:nth-of-type(4),
+  footer a:nth-of-type(1),
+  footer a:nth-of-type(2),
+  footer a:nth-of-type(3),
+  footer a:nth-of-type(4) {
+    margin: 0;
   }
 }
-  
-/* restyle project indices */
+
+/* enforce display / sort order on indices */
 /* make favicon from gravitar */
-  /* introduce more color accents */
-/* fine-tune font size / weight */
+/* introduce more color accents */

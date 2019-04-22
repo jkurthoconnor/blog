@@ -3,7 +3,14 @@
   <% @projects.each do |project| %>
     <ul>
       <li><a href=<%= project.url %> target="_blank"><%= project.name %></a></li>
-      <li><p><%= project.description %></p></li>
+      <li>
+        <p>
+        <a href=<%= project.url %> >
+          <%= project.description %>
+          <span class="more">>>></span>
+        </a>
+        </p>
+      </li>
     </ul>
   <% end %>
 </section>

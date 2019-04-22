@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
 body {
-  font: 400 28px "Roboto", sans-serif;
+  font: 400 21px "Roboto", sans-serif;
   color: #fff;
   letter-spacing: 1.6px;
   line-height: 1.6;
@@ -36,7 +36,8 @@ nav {
 }
 
 h1 {
-  font-size: 76px;
+  font-size: 67px;
+  letter-spacing: 3.2px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -61,16 +62,29 @@ a.current {
   border-bottom: 1px solid rgba(255,255,255, 1);
 }
 
-@media (max-width: 400px) {
+@media (min-width: 300px) and (max-width: 415px) {
   h1 {
-    font-size: 64px;
+    font-size: 40px;
+  }
+
+  a:nth-of-type(3) {
+    margin: 0 20px;
   }
 
   a:nth-of-type(4) {
     margin-left: 0;
   }
+}
 
-  a:nth-of-type(3) {
-    margin: 0 20px;
+@media (max-width: 299px) {
+  nav {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  a,
+  a:nth-of-type(3),
+  a:nth-of-type(4) {
+    margin: 0;
   }
 }
