@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 @import url('code_blocks.css');
 
+:root {
+  --accent-rgb: 255,0,0;
+  --low-opacity: 0.3;
+  --high-opacity: 0.8;
+}
+
 body {
   position: relative;
   font: 400 16px "Roboto", sans-serif;
@@ -36,7 +42,7 @@ div.border {
   top: 0px;
   width: 100%;
   height: 3px;
-  background-color: rgba(200,0,0,0.7);
+  background-color: rgba(var(--accent-rgb), var(--high-opacity));
 }
 
 nav,
@@ -96,11 +102,11 @@ footer a:nth-of-type(2) {
 }
 
 a.current {
-  border-bottom: 1px solid rgba(255,0,0, 1.0);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 1.0);
 }
 
 a.over {
-  border-bottom: 1px solid rgba(255,0,0, 0.3);
+  border-bottom: 1px solid rgba(var(--accent-rgb), var(--low-opacity));
 }
 
 p {
@@ -108,12 +114,12 @@ p {
 }
 
 .index p {
-  border-left: 2px solid rgba(255,0,0, 0.3);
+  border-left: 2px solid rgba(var(--accent-rgb), var(--low-opacity));
   padding-left: 1em;
 }
 
 .index p:hover {
-  border-left: 2px solid rgba(255,0,0, 0.8);
+  border-left: 2px solid rgba(var(--accent-rgb), var(--high-opacity));
 }
 
 .index p > a {
@@ -134,12 +140,12 @@ p {
 span.more {
   font-weight: 300;
   margin-left: 10px;
-  color: rgba(255,0,0,0.8);
+  color: rgba(var(--accent-rgb), var(--high-opacity));
 }
 
 span.more:hover {
   font-weight: 400;
-  color: rgba(255,0,0,1.0);
+  color: rgba(var(--accent-rgb), 1.0);
 }
 
 @media (min-width: 374px) and (max-width: 600px) {
@@ -203,5 +209,3 @@ span.more:hover {
 }
 
 /* enforce display / sort order on indices */
-/* make favicon from gravitar */
-/* introduce more color accents */
