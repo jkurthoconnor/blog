@@ -29,7 +29,7 @@ class Blog < Sinatra::Base
   end
 
   before("/blog*") do
-    @posts = []
+    posts = []
 
     Dir.glob("articles/*.md") do |article|
       meta, body = File.read(File.expand_path(article)).split("\n\n", 2)
@@ -41,18 +41,22 @@ class Blog < Sinatra::Base
                                 .join("-")
                                 .downcase
                                 .prepend("blog/")
-      @posts << post
+      posts << post
     end
+
+    @posts = posts.sort { |a, b| b.date - a.date }
   end
 
   before("/projects*") do
-    @projects = []
+    projects = []
 
     Dir.glob("projects/*.yaml") do |file|
       contents = File.read(File.expand_path(file))
       project = OpenStruct.new(Psych.load(contents))
-      @projects << project
+      projects << project
     end
+
+    @projects = projects.sort { |a, b| a.priority - b.priority }
   end
 
   get "/" do
