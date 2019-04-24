@@ -151,6 +151,20 @@ span.more:hover {
   color: rgba(var(--accent-rgb, red), 1.0);
 }
 
+@media (max-width: 450px) {
+  header {
+    padding-top: 28px;
+  }
+
+  nav {
+    padding: 16px 0;
+  }
+
+  main {
+    margin-top: 240px;
+  }
+}
+
 @media (min-width: 374px) and (max-width: 600px) {
   header a,
   footer a,
@@ -165,6 +179,7 @@ span.more:hover {
 }
 
 @media (min-width: 300px) and (max-width: 373px) {
+
   header a:nth-of-type(3) {
     margin: 0 20px 0 0;
   }
@@ -211,4 +226,3 @@ span.more:hover {
   }
 }
 
-/* enforce display / sort order on indices */
