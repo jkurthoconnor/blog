@@ -152,12 +152,8 @@ span.more:hover {
 }
 
 p.license {
-  font-size: 10px;
-  margin: 0;
-}
-
-p.last-line {
-  margin-bottom: 10px;
+  font-size: .65rem;
+  margin: 0 0 28px;
 }
 
 @media (max-width: 450px) {
