@@ -151,6 +151,15 @@ span.more:hover {
   color: rgba(var(--accent-rgb, red), 1.0);
 }
 
+p.license {
+  font-size: 10px;
+  margin: 0;
+}
+
+p.last-line {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 450px) {
   header {
     padding-top: 28px;
