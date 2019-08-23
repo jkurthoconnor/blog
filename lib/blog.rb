@@ -12,6 +12,10 @@ class Blog < Sinatra::Base
     Tilt.register Redcarpet::Markdown
   end
 
+  configure :production do
+    set :logging, true
+  end
+
   configure :development do
     require "sinatra/reloader"
     require "pry"
