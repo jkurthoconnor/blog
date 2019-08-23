@@ -1,0 +1,7 @@
+priority: 2
+name: Airline Route Tracker
+url: https://github.com/jkurthoconnor
+image: images/airline_tracker.png
+imagelg: false
+description: A React application to view and filter airline routes. Filter by airline or airport. Bootstrapped with Create React App.
+

@@ -1,0 +1,7 @@
+priority: 3
+name: Mello
+url: https://github.com/jkurthoconnor
+image: images/mello.png
+imagelg: false
+description: Project management application. Built with Ruby on Rails, Webpacker, React and SQL.
+

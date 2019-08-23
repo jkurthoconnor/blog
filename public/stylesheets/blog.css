@@ -163,10 +163,16 @@ span.more:hover {
   margin: 0 15%;
 }
 
-img.project-img {
+img.project-img-lg {
   max-width: 100%;
   margin: 20px auto;
 }
+
+img.project-img-sm {
+  max-width: 70%;
+  margin: 20px 15%;
+}
+
 
 #avatar {
   max-width: 20%;

@@ -1,0 +1,7 @@
+priority: 4
+name: Do It
+url: https://github.com/jkurthoconnor
+image: images/do_it.png
+imagelg: false
+description: A todo application written in Sinatra and JavaScript.
+
