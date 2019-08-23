@@ -163,6 +163,14 @@ span.more:hover {
   margin: 0 15%;
 }
 
+#avatar {
+  max-width: 12%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
 .img-wrapper {
   margin-top: 50px;
 } 
