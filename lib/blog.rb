@@ -28,24 +28,24 @@ class Blog < Sinatra::Base
             "Expires" => Time.at(Time.now + 7200).to_s
   end
 
-  before("/blog*") do
-    posts = []
+  # before("/blog*") do
+  #   posts = []
 
-    Dir.glob("articles/*.md") do |article|
-      meta, body = File.read(File.expand_path(article)).split("\n\n", 2)
-      post = OpenStruct.new(Psych.load(meta))
-      post.body = body
-      post.resource = post.title.strip
-                                .split[0..4]
-                                .map { |w| w.gsub(/\W/, "") }
-                                .join("-")
-                                .downcase
-                                .prepend("blog/")
-      posts << post
-    end
+  #   Dir.glob("articles/*.md") do |article|
+  #     meta, body = File.read(File.expand_path(article)).split("\n\n", 2)
+  #     post = OpenStruct.new(Psych.load(meta))
+  #     post.body = body
+  #     post.resource = post.title.strip
+  #                               .split[0..4]
+  #                               .map { |w| w.gsub(/\W/, "") }
+  #                               .join("-")
+  #                               .downcase
+  #                               .prepend("blog/")
+  #     posts << post
+  #   end
 
-    @posts = posts.sort { |a, b| b.date - a.date }
-  end
+  #   @posts = posts.sort { |a, b| b.date - a.date }
+  # end
 
   before("/projects*") do
     projects = []
@@ -74,18 +74,23 @@ class Blog < Sinatra::Base
     erb :project_index
   end
 
-  get "/blog/?" do
-    @blog_status = "current"
-    erb :blog_index
-  end
+  # get "/blog/?" do
+  #   @blog_status = "current"
+  #   erb :blog_index
+  # end
 
-  get "/blog/:title" do |title|
-    @blog_status = "current"
-    @post = @posts.find { |post| post.resource.include?(title) }
-    pass unless @post
+  # get "/blog/:title" do |title|
+  #   @blog_status = "current"
+  #   @post = @posts.find { |post| post.resource.include?(title) }
+  #   pass unless @post
 
-    markdown = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
-    erb :blog_post, locals: { markdown: markdown } 
+  #   markdown = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
+  #   erb :blog_post, locals: { markdown: markdown } 
+  # end
+
+  get "/resume" do
+    file = File.join(File.expand_path('../..', __FILE__), 'public/kurth_oconnor_resume.pdf')
+    send_file(file, type: :pdf, disposition: :inline)
   end
 
   not_found do
