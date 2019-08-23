@@ -103,7 +103,7 @@ footer a:nth-of-type(2) {
 }
 
 a.current {
-  border-bottom: 1px solid rgba(var(--accent-rgb, red), 1.0);
+  border-bottom: 1px solid rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 
 a.over {
@@ -161,6 +161,11 @@ span.more:hover {
 #about img {
   max-width: 70%;
   margin: 0 15%;
+}
+
+img.project-img {
+  max-width: 100%;
+  margin: 20px auto;
 }
 
 #avatar {

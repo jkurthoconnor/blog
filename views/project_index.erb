@@ -2,7 +2,16 @@
   <h2>Projects</h2>
   <% @projects.each do |project| %>
     <ul>
-      <li><a href=<%= project.url %> target="_blank"><%= project.name %></a></li>
+      <li>
+        <a href=<%= project.url %> target="_blank"><%= project.name %></a>
+      </li>
+      <li>
+        <img 
+           class="project-img"
+           src="<%= project.image %>"
+           alt="<%= project.name %>"
+       />
+      </li>
       <li>
         <p>
         <a href=<%= project.url %> >

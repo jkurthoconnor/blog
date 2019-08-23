@@ -1,0 +1,5 @@
+priority: 1
+name: Crato
+url: https://crato-logging.github.io
+image: images/crato-angellist-banner.png
+description: Crato is a framework to allow developers to quickly and easily deploy a centralized logging infrastructure. Using Crato, each machine sends its logs to a central collection server, where developers can gain insight into their entire system by analyzing the consolidated logs across the entire deployed fleet of systems and applications. Besides log data consolidation and analysis (via InfluxDB), Crato also provides smart compression and archiving (via Amazon S3 and S3 Glacier). Crato makes configuring, deploying, and maintaining all these pieces easy and fast.  Read more about Crato 
