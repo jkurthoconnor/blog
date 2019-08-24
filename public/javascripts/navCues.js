@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  const anchors = document.querySelectorAll('a');
+  const anchorSpans = document.querySelectorAll('a span');
   const topBorder = document.getElementsByClassName('border')[0];
 
   const toggleOverClassOnAnchor = (event) => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     topBorder && (topBorder.style.backgroundColor = 'rgba(255,0,0,1.0)');
   };
 
-  anchors.forEach(function(a) {
+  anchorSpans.forEach(function(a) {
     a.addEventListener('mouseenter', (e) => {
       toggleOverClassOnAnchor(e);
     });

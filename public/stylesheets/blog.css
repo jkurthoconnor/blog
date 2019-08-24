@@ -31,7 +31,8 @@ header {
   padding-top: 50px;
 }
 
-main {
+main,
+footer {
   max-width: 750px;
   margin: 0 50px 0;
 }
@@ -50,7 +51,7 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 5px 0 15px;
+  padding: 5px 0 40px;
 }
 
 h1,
@@ -84,28 +85,25 @@ a {
   font-weight: 500;
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0, 0);
 }
 
 nav a,
 footer a {
+  flex: 1;
   font-size: 21px;
-  margin: 0 50px 10px;
+  text-align: center;
+  margin: 0 10px;
 }
 
-footer a:nth-of-type(1) {
-  margin-left: 10px;
+a span {
+  border-bottom: 1px solid rgba(0,0,0, 0);
 }
 
-footer a:nth-of-type(2) {
-  margin-left: 25px;
-}
-
-a.current {
+a span.current {
   border-bottom: 1px solid rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 
-a.over {
+a span.over {
   border-bottom: 1px solid rgba(var(--accent-rgb, red), var(--low-opacity));
 }
 
@@ -127,11 +125,13 @@ nav {
   text-align: left;
 }
 
-.index ul {
-  margin-bottom: 100px;
+.index h2:first-of-type {
+  margin-top: 25px;
+
 }
 
 .index ul {
+  margin-bottom: 100px;
   border-left: 2px solid rgba(var(--accent-rgb, red), var(--low-opacity));
   padding-left: 1em;
 }
@@ -214,48 +214,7 @@ p.license {
   }
 
   nav {
-    padding: 16px 0;
-  }
-}
-
-@media (min-width: 374px) and (max-width: 600px) {
-  nav a,
-  footer a, 
-  footer a:nth-of-type(2) {
-    margin: 0 10px 10px;
-  }
-
-  nav a:nth-of-type(4),
-  footer a:nth-of-type(4) {
-    margin-left: 15px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 373px) {
-  nav a:nth-of-type(3) {
-    margin: 0 20px 0 0;
-  }
-
-  nav a:nth-of-type(4) {
-    margin-left: 70px;
-    margin-right: 20px;
-  }
-
-  footer a:nth-of-type(1) {
-    margin-left: 50px;
-  }
-
-  footer a:nth-of-type(2) {
-    margin: 0 35px 10px;
-  }
-
-  footer a:nth-of-type(3) {
-    margin: 0 20px 0 18px;
-  }
-
-  footer a:nth-of-type(4) {
-    margin-left:  80px;
-    margin-right: 5px;
+    padding: 0 0 15px;
   }
 }
 
@@ -265,16 +224,4 @@ p.license {
     flex-flow: column nowrap;
     align-items: center;
   }
-
-  nav a,
-  footer a,
-  nav a:nth-of-type(3),
-  nav a:nth-of-type(4),
-  footer a:nth-of-type(1),
-  footer a:nth-of-type(2),
-  footer a:nth-of-type(3),
-  footer a:nth-of-type(4) {
-    margin: 0;
-  }
 }
-
