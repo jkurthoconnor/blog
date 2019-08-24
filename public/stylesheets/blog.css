@@ -118,12 +118,23 @@ p {
   font-size: 1.5rem;
 }
 
-.index p {
+.index h2 {
+  text-align: left;
+  /* padding-left: .5em; */
+}
+
+.index ul {
+  margin-bottom: 100px;
+}
+
+/* .index p { */
+.index ul {
   border-left: 2px solid rgba(var(--accent-rgb, red), var(--low-opacity));
   padding-left: 1em;
 }
 
-.index p:hover {
+/* .index p:hover { */
+.index ul:hover {
   border-left: 2px solid rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 

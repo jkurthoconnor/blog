@@ -1,10 +1,9 @@
 <section class="index" >
-  <h2>Projects</h2>
   <% @projects.each do |project| %>
+
+    <h2><a href=<%= project.url %> target="_blank"><%= project.name %></a></h2>
+
     <ul>
-      <li>
-        <a href=<%= project.url %> target="_blank"><%= project.name %></a>
-      </li>
       <li>
         <img 
            class=<%= project.imagelg ? "project-img-lg" : "project-img-sm" %>
