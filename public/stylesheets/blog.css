@@ -186,7 +186,7 @@ img.project-img-sm {
 }
 
 #avatar {
-  max-width: 20%;
+  max-width: 18%;
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
@@ -207,6 +207,28 @@ p.license {
   font-size: .65rem;
   margin: 0 0 28px;
 }
+@media (min-width: 1400px) {
+  #avatar {
+    max-width: 10%;
+  }
+}
+
+@media (min-width: 1000px) {
+  #avatar {
+    max-width: 15%;
+  }
+}
+
+@media (max-width: 700px) {
+  #avatar {
+    max-width: 25%;
+  }
+
+  header h1 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
 
 @media (max-width: 450px) {
   header {
@@ -215,6 +237,10 @@ p.license {
 
   nav {
     padding: 0 0 15px;
+  }
+
+  #avatar {
+    display: none;
   }
 }
 
