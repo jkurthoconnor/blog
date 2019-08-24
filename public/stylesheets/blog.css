@@ -1,6 +1,6 @@
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin');
-@import url('code_blocks.css');
+/* @import url('code_blocks.css'); */
 
 :root {
   --accent-rgb: 178,39,77;
@@ -153,7 +153,6 @@ span.more:hover {
   color: rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 
-
 #about a {
   color: rgba(var(--accent-rgb, red), var(--high-opacity));
 }
@@ -172,7 +171,6 @@ img.project-img-sm {
   max-width: 70%;
   margin: 20px 15%;
 }
-
 
 #avatar {
   max-width: 20%;
@@ -205,17 +203,13 @@ p.license {
   nav {
     padding: 16px 0;
   }
-
-  main {
-    margin-top: 240px;
-  }
 }
 
 @media (min-width: 374px) and (max-width: 600px) {
   header a,
-  footer a,
+  footer a, 
   footer a:nth-of-type(2) {
-    margin: 0 35px 10px;
+    margin: 0 10px 10px;
   }
 
   header a:nth-of-type(4),
@@ -225,7 +219,6 @@ p.license {
 }
 
 @media (min-width: 300px) and (max-width: 373px) {
-
   header a:nth-of-type(3) {
     margin: 0 20px 0 0;
   }
