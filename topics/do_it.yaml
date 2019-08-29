@@ -1,6 +1,6 @@
 priority: 4
 name: Do It
-url: https://github.com/jkurthoconnor
+url: false
 image: images/do_it.png
 imagelg: false
 description: A responsive web application to manage todos. Do It is built with a Sinatra backend and a JavaScript and Handlebars.js frontend.

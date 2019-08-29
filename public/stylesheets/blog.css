@@ -37,6 +37,10 @@ footer {
   margin: 0 50px 0;
 }
 
+section.index {
+  max-width: 750px;
+}
+
 div.border {
   position: fixed;
   top: 0px;
@@ -175,12 +179,12 @@ span.more:hover {
   margin: 0 15%;
 }
 
-img.project-img-lg {
+img.topic-img-lg {
   max-width: 100%;
   margin: 20px auto;
 }
 
-img.project-img-sm {
+img.topic-img-sm {
   max-width: 70%;
   margin: 20px 15%;
 }
@@ -207,6 +211,7 @@ p.license {
   font-size: .65rem;
   margin: 0 0 28px;
 }
+
 @media (min-width: 1400px) {
   #avatar {
     max-width: 10%;

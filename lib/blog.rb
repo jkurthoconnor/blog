@@ -32,65 +32,25 @@ class Blog < Sinatra::Base
             "Expires" => Time.at(Time.now + 7200).to_s
   end
 
-  # before("/blog*") do
-  #   posts = []
+  before("/about") do
+    topics = []
 
-  #   Dir.glob("articles/*.md") do |article|
-  #     meta, body = File.read(File.expand_path(article)).split("\n\n", 2)
-  #     post = OpenStruct.new(Psych.load(meta))
-  #     post.body = body
-  #     post.resource = post.title.strip
-  #                               .split[0..4]
-  #                               .map { |w| w.gsub(/\W/, "") }
-  #                               .join("-")
-  #                               .downcase
-  #                               .prepend("blog/")
-  #     posts << post
-  #   end
-
-  #   @posts = posts.sort { |a, b| b.date - a.date }
-  # end
-
-  before("/projects*") do
-    projects = []
-
-    Dir.glob("projects/*.yaml") do |file|
+    Dir.glob("topics/*.yaml") do |file|
       contents = File.read(File.expand_path(file))
-      project = OpenStruct.new(Psych.load(contents))
-      projects << project
+      topic = OpenStruct.new(Psych.load(contents))
+      topics << topic
     end
 
-    @projects = projects.sort { |a, b| a.priority - b.priority }
+    @topics = topics.sort { |a, b| a.priority - b.priority }
   end
 
   get "/" do
-    @home_status = "current"
     erb :landing, layout: false
   end
 
   get "/about" do
-    @about_status = "current"
     erb :about
   end
-
-  get "/projects/?" do
-    @project_status = "current"
-    erb :project_index
-  end
-
-  # get "/blog/?" do
-  #   @blog_status = "current"
-  #   erb :blog_index
-  # end
-
-  # get "/blog/:title" do |title|
-  #   @blog_status = "current"
-  #   @post = @posts.find { |post| post.resource.include?(title) }
-  #   pass unless @post
-
-  #   markdown = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
-  #   erb :blog_post, locals: { markdown: markdown } 
-  # end
 
   get "/resume" do
     file = File.join(File.expand_path('../..', __FILE__), 'public/kurth_oconnor_resume.pdf')
