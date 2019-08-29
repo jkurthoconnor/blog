@@ -1,5 +1,5 @@
 @import url('reset.css');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&subset=latin');
 
 :root {
   --accent-rgb: 178,39,77;
@@ -118,7 +118,7 @@ a span.current {
   border-bottom: 1px solid rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 
-a span.over {
+a span.over:not(footer a span.over) {
   border-bottom: 1px solid rgba(var(--accent-rgb, red), var(--low-opacity));
 }
 
@@ -187,16 +187,22 @@ img.topic-img-sm {
   border-bottom-right-radius: 100%;
 }
 
-i.fas,
-i.fab {
-  font-size: 1.5em;
+footer a {
   color: rgba(var(--accent-rgb), 0.8);
+  font-size: 2.0rem;
 }
 
-i.fas:hover,
-i.fab:hover{
+footer a:hover,
+footer a:hover{
   color: rgba(var(--accent-rgb), var(--high-opacity));
 }
+
+svg.fa-file ~ span {
+  font-weight: 900;
+  font-size: 1.0rem;
+  padding-top: 15px;
+}
+
 
 .img-wrapper {
   margin-top: 50px;
