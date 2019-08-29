@@ -1,6 +1,5 @@
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin');
-/* @import url('code_blocks.css'); */
 
 :root {
   --accent-rgb: 178,39,77;
@@ -32,13 +31,17 @@ header {
 }
 
 main,
-footer {
-  max-width: 750px;
-  margin: 0 50px 0;
-}
-
+footer,
 section.index {
   max-width: 750px;
+}
+
+main {
+  margin: 50px;
+}
+
+footer {
+  margin: 0 50px 0;
 }
 
 div.border {
@@ -49,19 +52,20 @@ div.border {
   background-color: rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 
-nav,
 footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 5px 0 40px;
+  padding: 40px 0 40px;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgba(255,255,255,1.0);
 }
 
 h1,
-h2,
-h3 {
-  font-weight: 400;
+h2 {
+  font-weight: 500;
   text-align: center;
 }
 
@@ -76,9 +80,9 @@ h2 {
   margin-bottom: 40px;
 }
 
-h3 {
-  font-size: 21px;
-  margin-bottom: 20px;
+h2.divider {
+  font-weight: 300;
+  font-style: italic;
 }
 
 ul {
@@ -91,7 +95,6 @@ a {
   text-decoration: none;
 }
 
-nav a,
 footer a {
   flex: 1;
   font-size: 21px;
@@ -119,13 +122,7 @@ p {
   font-size: 1.5rem;
 }
 
-nav {
-  position: sticky;
-  top: 3px;
-  background-color: rgba(255,255,255,1.0);
-}
-
-.index h2 {
+.index h2:not(.divider) {
   text-align: left;
 }
 
@@ -149,24 +146,9 @@ nav {
   border: none;
 }
 
-.index .date {
-  margin-top: .5em;
-}
-
-.index .date,
-.index .tags {
-  font-weight: 300;
-  line-height: 1.2;
-}
-
 span.more {
-  font-weight: 300;
+  font-weight: 500;
   margin-left: 10px;
-  color: rgba(var(--accent-rgb, red), var(--high-opacity));
-}
-
-span.more:hover {
-  font-weight: 400;
   color: rgba(var(--accent-rgb, red), var(--high-opacity));
 }
 
@@ -240,17 +222,12 @@ p.license {
     padding-top: 28px;
   }
 
-  nav {
-    padding: 0 0 15px;
-  }
-
   #avatar {
     display: none;
   }
 }
 
 @media (max-width: 299px) {
-  nav,
   footer {
     flex-flow: column nowrap;
     align-items: center;

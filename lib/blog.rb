@@ -2,8 +2,6 @@ require "sinatra/base"
 require "ostruct"
 require "psych"
 require "redcarpet"
-require "date"
-require_relative "./htmlwithpygments"
 
 
 class Blog < Sinatra::Base
@@ -32,7 +30,7 @@ class Blog < Sinatra::Base
             "Expires" => Time.at(Time.now + 7200).to_s
   end
 
-  before("/about") do
+  before("/") do
     topics = []
 
     Dir.glob("topics/*.yaml") do |file|
@@ -45,10 +43,6 @@ class Blog < Sinatra::Base
   end
 
   get "/" do
-    erb :landing, layout: false
-  end
-
-  get "/about" do
     erb :about
   end
 

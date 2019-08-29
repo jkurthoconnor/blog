@@ -17,7 +17,11 @@
            src="images/kurth.jpg"
            alt="Kurth O'Connor"
        />
-      <h1><%= @title %></h1>
+      <h1>
+        <a href="/resume" target="_blank">
+          <%= @title %>
+        </a>
+      </h1>
     </header>
 
     <main>
@@ -27,22 +31,15 @@
           <h2><%= @message %></h2>
         <% end %>
 
-        <p><span id="greeting">Hi, I'm Kurth.</span> I am a software engineer based in Brooklyn, NY. I enjoy working with front and backend technologies (see my resume for specifics), but my real love is problem-solving. Code is just the tool, and I am always eager to find and use the right tool for the job. Before I jumped to development full time, I was a tenured philosophy professor, with significant experience in teaching, research and program administration. </p>
+        <p>
+          <span id="greeting">Hi, I'm Kurth</span>, a software engineer based in Brooklyn, NY. I have significant experience in both Ruby and JavaScript ecosystems, SQL, NoSQL, data streaming and pipelines. I am also an accomplished researcher and educator.
+        </p>
 
-        <p>Most recently, I created <a href="https://crato-logging.github.io" target="_blank"><span>Crato</span></a>, an open source framework for small applications to easily deploy centralized logging.</p>
+        <p>
+          Most recently, I built <a href="https://crato-logging.github.io" target="_blank"><span>Crato</span></a>, an open source framework for small applications to easily deploy centralized logging.
+        </p>
 
-        <div class="img-wrapper">
-          <img src="images/crato_docker_deploy.gif">
-          <p>Deploying Crato via Docker</p>
-        </div>
-
-        <p>Crato grew out of the realization that although applications and system services record their events to local log files, by default these log messages remain on local systems and are eventually either archived away never to be seen or permanently deleted. Without intervening then, developers and administrators lose valuable insight into the history, performance and security of their systems and applications.</p>
-
-      <p>Crato allows developers to quickly and easily deploy a centralized logging infrastructure to address this problem. Using Crato, each machine sends its logs to a central collection server, where developers can gain insight into their entire system by analyzing the consolidated logs across the entire deployed fleet of systems and applications. Besides log data consolidation and analysis (via InfluxDB), Crato also provides smart compression and archiving (via Amazon S3 and S3 Glacier). Crato makes configuring, deploying, and maintaining all these pieces easy and fast.</p>
-
-      <p>Read more about Crato in the project's <a href="https://crato-logging.github.io#case-study" target="_blank"><span>case study</span></a>.</p>
       </article>
-
 
       <section class="index" >
 
@@ -76,22 +73,28 @@
                 <%= topic.description %>
                 <% if topic.url %>
                   <a href=<%= topic.url %> >
-                    <span class="more">>>></span>
+                    <span class="more">Read the case study.</span>
                   </a>
                   <% end %>
               </p>
             </li>
 
           </ul>
+
+          <% if topic.name == "Crato" %>
+            <h2 class="divider">
+              Other Projects
+            </h2>
+          <% end %> 
         <% end %>
-          </article>
+        </article>
       </section>
     </main>
 
     <footer>
 
-      <a href="/resume">
-        <span target="_blank" >resume</span>
+      <a href="/resume" target="_blank">
+        <span >resume</span>
       </a>
       <a href="mailto:kurth@kurthoconnor.com">
         <span>email</span>
