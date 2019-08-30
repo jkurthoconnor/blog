@@ -10,7 +10,6 @@
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&subset=latin" as="font">
     <link rel="stylesheet" type="text/css" href="/stylesheets/blog.css">
 
-
     <title><%= @title %></title>
   </head>
 
@@ -30,28 +29,25 @@
     </header>
 
     <main>
-
       <article id="about">
         <% if @message %>
           <h2><%= @message %></h2>
         <% end %>
 
         <p>
-        <span class="text-emphasis">Hi, I'm Kurth</span>, a software engineer based in Brooklyn, NY. 
+          <span class="text-emphasis">Hi, I'm Kurth</span>, a software engineer based in Brooklyn, NY. 
         </p>
 
         <p>
-        Most recently, I built <a href="https://crato-logging.github.io" target="_blank"><span>Crato</span></a>, an open source framework for small applications to easily deploy centralized logging.
+          Most recently, I built <a href="https://crato-logging.github.io" target="_blank"><span>Crato</span></a>, an open source framework for small applications to easily deploy centralized logging.
         </p>
 
         <p>
-        I have significant experience in both Ruby and JavaScript ecosystems, SQL, NoSQL, data streaming and pipelines. I am also an accomplished researcher and educator.
+          I have significant experience in both Ruby and JavaScript ecosystems, SQL, NoSQL, data streaming and pipelines. I am also an accomplished researcher and educator.
         </p>
-
       </article>
 
       <section class="index" >
-
         <% @topics.each do |topic| %>
           <article>
           <h2>
@@ -87,7 +83,6 @@
                   <% end %>
               </p>
             </li>
-
           </ul>
 
           <% if topic.name == "Crato" %>
@@ -103,32 +98,33 @@
     <footer>
       <ul>
         <li>
-      <a href="/resume" target="_blank">
-        <span class="fa-layers fa-fw">
-          <i class="fas fa-file"></i>
-          <span class="fa-layers-text fa-inverse">cv</span>
-        </span>
-      </a>
+          <a href="/resume" target="_blank">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-file"></i>
+              <span class="fa-layers-text fa-inverse">cv</span>
+            </span>
+          </a>
         </li>
+
         <li>
-      <a href="mailto:kurth@kurthoconnor.com">
-        <i class="fas fa-envelope"></i>
-      </a>
+          <a href="mailto:kurth@kurthoconnor.com">
+            <i class="fas fa-envelope"></i>
+          </a>
         </li>
+
         <li>
-      <a href="https://www.linkedin.com/in/kurth-o-connor-01986a169" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
+          <a href="https://www.linkedin.com/in/kurth-o-connor-01986a169" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </li>
+
         <li>
-      <a href="https:github.com/jkurthoconnor" target="_blank">
-        <i class="fab fa-github "></i>
-      </a>
+          <a href="https:github.com/jkurthoconnor" target="_blank">
+            <i class="fab fa-github "></i>
+          </a>
         </li>
       </ul>
 
     </footer>
   </body>
 </html>
-
-
