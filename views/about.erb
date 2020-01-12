@@ -22,7 +22,7 @@
            alt="Kurth O'Connor"
        />
       <h1>
-        <a href="/resume" target="_blank">
+        <a href="/" target="_blank">
           <%= @title %>
         </a>
       </h1>
@@ -35,7 +35,7 @@
         <% end %>
 
         <p>
-          <span class="text-emphasis">Hi, I'm Kurth</span>, a software engineer based in Brooklyn, NY. 
+          <span class="text-emphasis">Hi, I'm Kurth</span>, a software engineer based in New York City.
         </p>
 
         <p>
@@ -48,7 +48,7 @@
       </article>
 
       <section class="index" >
-        <% @topics.each do |topic| %>
+        <% @topics && @topics.each do |topic| %>
           <article>
           <h2>
             <% if topic.url %>
