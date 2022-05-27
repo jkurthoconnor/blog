@@ -15,7 +15,7 @@ GEM
     psych (3.1.0)
     pygments.rb (1.2.1)
       multi_json (>= 1.0.0)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rack-protection (2.0.8.1)
       rack
     redcarpet (3.5.0)
